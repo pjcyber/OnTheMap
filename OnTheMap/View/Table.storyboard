@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FPP-wK-wYt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Locations View Controller-->
+        <scene sceneID="uF5-d4-Ih4">
+            <objects>
+                <viewController id="FPP-wK-wYt" customClass="LocationsViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M9i-Iv-rcA"/>
+                        <viewControllerLayoutGuide type="bottom" id="h0g-G1-lpO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b2j-uM-h9d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9r-8q-h8f">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Logout" id="L6R-qg-Rce">
+                                        <connections>
+                                            <action selector="logoutTapped:" destination="FPP-wK-wYt" id="Lze-Qi-fXG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Nd0-45-Eba"/>
+                                    <barButtonItem title="Item" image="PlusIcon" id="dHx-Gn-wLO" userLabel="plus">
+                                        <connections>
+                                            <segue destination="yNV-7H-atn" kind="show" id="FJG-z3-7hG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" image="RefreshIcon" id="VDh-Jl-ENn" userLabel="refresh">
+                                        <connections>
+                                            <action selector="refreshTapped:" destination="FPP-wK-wYt" id="d6B-QH-LP2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ggO-U8-cwt">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" id="hfv-tw-ubz" customClass="LocationCell" customModule="OnTheMap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hfv-tw-ubz" id="FtQ-dw-Lzf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenPinIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ouD-BU-Qy4">
+                                                    <rect key="frame" x="10" y="6" width="60" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="2aE-SW-ctj"/>
+                                                        <constraint firstAttribute="height" constant="80" id="gSH-PU-HNI"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XbP-yG-1fc">
+                                                    <rect key="frame" x="78" y="21.5" width="308" height="49"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRb-iA-AAf" userLabel="Name">
+                                                            <rect key="frame" x="0.0" y="0.0" width="308" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQ3-Do-Cpu" userLabel="url">
+                                                            <rect key="frame" x="0.0" y="28.5" width="308" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ouD-BU-Qy4" firstAttribute="leading" secondItem="FtQ-dw-Lzf" secondAttribute="leading" constant="10" id="35i-4z-foS"/>
+                                                <constraint firstItem="XbP-yG-1fc" firstAttribute="centerY" secondItem="FtQ-dw-Lzf" secondAttribute="centerY" id="iKG-rn-cw2"/>
+                                                <constraint firstItem="XbP-yG-1fc" firstAttribute="leading" secondItem="ouD-BU-Qy4" secondAttribute="trailing" constant="8" id="kuQ-wq-YaC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XbP-yG-1fc" secondAttribute="trailing" constant="8" id="o8i-Zz-J6I"/>
+                                                <constraint firstItem="ouD-BU-Qy4" firstAttribute="centerY" secondItem="FtQ-dw-Lzf" secondAttribute="centerY" id="z5g-dD-ZSi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="firstName" destination="HRb-iA-AAf" id="Wl8-23-oUV"/>
+                                            <outlet property="mediaURL" destination="CQ3-Do-Cpu" id="3Ei-K8-hG6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FPP-wK-wYt" id="u8H-9V-ryw"/>
+                                    <outlet property="delegate" destination="FPP-wK-wYt" id="Bh7-aW-z7c"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="aof-qd-x8A">
+                                <rect key="frame" x="190" y="431" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="g9r-8q-h8f" firstAttribute="centerX" secondItem="b2j-uM-h9d" secondAttribute="centerX" id="N6r-if-Wdx"/>
+                            <constraint firstItem="g9r-8q-h8f" firstAttribute="width" secondItem="b2j-uM-h9d" secondAttribute="width" id="Zjv-0e-GMH"/>
+                            <constraint firstItem="ggO-U8-cwt" firstAttribute="top" secondItem="g9r-8q-h8f" secondAttribute="bottom" id="d3e-8d-FQg"/>
+                            <constraint firstAttribute="trailing" secondItem="ggO-U8-cwt" secondAttribute="trailing" id="pw8-5R-93L"/>
+                            <constraint firstItem="g9r-8q-h8f" firstAttribute="top" secondItem="dXI-6a-H4X" secondAttribute="top" id="qvI-V5-aYI"/>
+                            <constraint firstItem="ggO-U8-cwt" firstAttribute="leading" secondItem="b2j-uM-h9d" secondAttribute="leading" id="ruC-eQ-tYJ"/>
+                            <constraint firstItem="dXI-6a-H4X" firstAttribute="bottom" secondItem="ggO-U8-cwt" secondAttribute="bottom" id="tRq-Ja-qAg"/>
+                            <constraint firstItem="ggO-U8-cwt" firstAttribute="width" secondItem="dXI-6a-H4X" secondAttribute="width" id="xtI-T0-hY4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dXI-6a-H4X"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="WhiteListIcon" id="1bN-oH-h05"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="aof-qd-x8A" id="sbh-cb-HEE"/>
+                        <outlet property="tableView" destination="ggO-U8-cwt" id="OEt-C1-Zcw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KqZ-3L-QJT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1655" y="-583"/>
+        </scene>
+        <!--AddLocation-->
+        <scene sceneID="eel-80-WTq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddLocation" id="yNV-7H-atn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="21w-m8-EbI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IhR-Bm-pMO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-939" y="-583"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GreenPinIcon" width="24" height="24"/>
+        <image name="PlusIcon" width="24" height="24"/>
+        <image name="RefreshIcon" width="24" height="24"/>
+        <image name="WhiteListIcon" width="75" height="50"/>
+    </resources>
+</document>

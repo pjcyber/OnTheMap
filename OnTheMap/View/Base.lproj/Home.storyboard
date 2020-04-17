@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h8U-sg-T0F">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="2FB-s9-XtA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" id="iKz-TH-eWD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="BluePinIcon" id="Yc7-sP-ycE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVv-SD-JCr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1535" y="242"/>
+        </scene>
+        <!--Table-->
+        <scene sceneID="oyh-sI-16V">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Table" id="quK-eb-OeU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="BlueListIcon" id="iX2-0e-4ej"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7r-j7-CJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1041" y="242"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="y6I-mx-jNv">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="h8U-sg-T0F" customClass="HomeViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xRT-sT-PUR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iKz-TH-eWD" kind="relationship" relationship="viewControllers" id="1Aq-hx-MA1"/>
+                        <segue destination="quK-eb-OeU" kind="relationship" relationship="viewControllers" id="ogq-L7-iNw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hR0-t5-7Tq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1295" y="-184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BlueListIcon" width="75" height="50"/>
+        <image name="BluePinIcon" width="75" height="50"/>
+    </resources>
+</document>

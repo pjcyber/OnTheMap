@@ -29,11 +29,17 @@
                                         <rect key="frame" x="20" y="148" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="PUa-N5-QZA" id="YNb-fU-swT"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83Q-dp-MuV">
                                         <rect key="frame" x="20" y="202" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="PUa-N5-QZA" id="h0a-dW-hj9"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwp-Wu-IAW">
                                         <rect key="frame" x="20" y="256" width="374" height="30"/>
@@ -55,11 +61,16 @@
                                     <constraint firstAttribute="trailing" secondItem="gwp-Wu-IAW" secondAttribute="trailing" constant="20" id="TAU-HE-O5w"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zM9-qR-zjo">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="R3z-7L-rf7" firstAttribute="trailing" secondItem="MwH-K0-5dm" secondAttribute="trailing" id="2VH-C3-VNS"/>
+                            <constraint firstItem="zM9-qR-zjo" firstAttribute="centerX" secondItem="OQD-Nt-N1v" secondAttribute="centerX" id="NnI-65-AmB"/>
                             <constraint firstItem="MwH-K0-5dm" firstAttribute="centerY" secondItem="OQD-Nt-N1v" secondAttribute="centerY" id="VUu-LK-XK5"/>
+                            <constraint firstItem="zM9-qR-zjo" firstAttribute="centerY" secondItem="OQD-Nt-N1v" secondAttribute="centerY" id="uAw-CZ-tbu"/>
                             <constraint firstItem="MwH-K0-5dm" firstAttribute="leading" secondItem="R3z-7L-rf7" secondAttribute="leading" id="uGc-G3-KFX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R3z-7L-rf7"/>
@@ -72,6 +83,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="zM9-qR-zjo" id="5kn-XW-vKa"/>
                         <outlet property="findButton" destination="gwp-Wu-IAW" id="d9P-qH-t3W"/>
                         <outlet property="linkTextField" destination="83Q-dp-MuV" id="8Qv-7b-mGY"/>
                         <outlet property="locationTextField" destination="Pde-1b-yGc" id="ekG-lv-KQj"/>

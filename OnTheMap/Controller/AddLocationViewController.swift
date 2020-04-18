@@ -15,17 +15,12 @@ class AddLocationViewController: UIViewController {
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var linkTextField: UITextField!
     @IBOutlet weak var findButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Global variables
     var locationRequest: LocationRequest!
     
     // MARK: - life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        locationTextField.delegate = self
-        linkTextField.delegate = self
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         checkSeesion()
@@ -33,8 +28,10 @@ class AddLocationViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func findOnClick(_ sender: Any) {
+        activityIndicator.startAnimating()
         if let addressString = locationTextField.text, let mediaURL = linkTextField.text {
             getCoordinate(addressString: addressString) { (location, error) in
+                 self.activityIndicator.stopAnimating()
                 if error == nil {
                     var url: URL?
                     if !mediaURL.isEmpty {

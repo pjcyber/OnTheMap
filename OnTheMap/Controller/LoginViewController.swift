@@ -27,8 +27,6 @@ class LoginViewController: UIViewController, UITextViewDelegate {
         emailTextField.text = ""
         passwordTextField.text = ""
         createSignUpSpannable()
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
     }
     
     // MARK: - IBAction
